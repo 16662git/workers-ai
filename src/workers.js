@@ -70,8 +70,8 @@ async function handleChat(request, env) {
 
     console.log('Sending request to AI with messages:', JSON.stringify(messages));
 
-    // Run AI model
-    const response = await env.AI.run("@cf/meta/llama-3-8b-instruct", {
+    // Run AI model or change to @cf/meta/llama-3-8b-instruct
+    const response = await env.AI.run("@cf/aisingapore/gemma-sea-lion-v4-27b-it", {
       messages,
       stream: true,
     });
